@@ -1,0 +1,4 @@
+artifact_location: file:///home/ariless/Desktop/AI/Machine%20Learning/Mlflow-Exo/src/mlruns/1
+experiment_id: '1'
+lifecycle_stage: active
+name: admission

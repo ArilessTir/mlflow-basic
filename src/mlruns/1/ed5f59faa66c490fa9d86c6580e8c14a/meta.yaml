@@ -1,0 +1,15 @@
+artifact_uri: file:///home/ariless/Desktop/AI/Machine%20Learning/Mlflow-Exo/src/mlruns/1/ed5f59faa66c490fa9d86c6580e8c14a/artifacts
+end_time: 1658348340140
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: ed5f59faa66c490fa9d86c6580e8c14a
+run_uuid: ed5f59faa66c490fa9d86c6580e8c14a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1658348340134
+status: 3
+tags: []
+user_id: ariless

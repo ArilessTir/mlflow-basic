@@ -7,18 +7,24 @@ from sklearn.model_selection import train_test_split
 import pandas as pd
 from config import TARGET
 
+import mlflow
+
 data = pd.read_csv('../Data/admission_data.csv')
 X= data.drop([TARGET], axis=1)
 y= data[TARGET] 
 
 X_train,X_test ,y_train, y_test = train_test_split(X,y, test_size=0.2, random_state=1234)
 
-lr = LinearRegression()
+mlflow.set_experiment('admission')
 
-lr.fit(X_train, y_train)
+with mlflow.start_run():
+    lr = LinearRegression()
 
-y_pred = lr.predict(X_test)
+    lr.fit(X_train, y_train)
 
-rmse = mse(y_test, y_pred, squared=False)
+    y_pred = lr.predict(X_test)
 
-print(rmse)
+    rmse = mse(y_test, y_pred, squared=False)
+
+    mlflow.log_metric('rmse', rmse)
+    mlflow.sklearn.log_model(lr,'model')
